@@ -1,0 +1,508 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#wrapper {
+	margin: auto;
+	border: 1px solid;
+	min-width: 500px;
+}
+/*подключаем шрифты*/
+@font-face {
+	font-family: 'Montserrat';
+	src: url(../fonts/montserrat.ttf) format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+@font-face {
+	font-family: 'RobotoSlab-Regular';
+	src: url(../fonts/RobotoSlab-Regular.ttf) format('truetype');
+	font-weight: normal;
+	font-size: normal;
+}
+/*хедер с горизонтальным меню*/
+.mainLogo {
+	margin: 42px 0 1.5em 16%;
+	display: inline-block;
+}
+.horizontalMenu {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	margin: -3em 4em 3em;
+}
+.navElems {
+	padding: 1.25em;
+	color: #777777;
+	text-decoration: none;
+	font: 0.9em 'Montserrat', sans-serif;
+	text-transform: uppercase;
+}
+.navElems:hover {
+	color: black;
+}
+
+/*задаем общие стили для всех главных заголовков*/
+.headers {
+	text-transform: uppercase;
+	margin: 0 auto;
+	font: bold 47px 'Montserrat', sans-serif; 
+	color: white;
+	margin-top: 100px;
+}
+.blackHeaders {
+	color: black;
+	font-size: 32px;
+}
+/*задаем общие стили для всех малых заголовков*/
+.subtitles {
+	font-size: 90%;
+	margin-top: 25px;
+	color: black;
+}
+/*частные стили конкретных заголовков*/
+.part_three .headers {
+	font-size: 32px;
+	margin: 0 1%;
+}
+.part_seven .headers {
+	font-size: 32px;
+	position: relative;
+	top: 1.4em;
+}
+/*малые заголовки футера*/
+.footerSubtitles {
+	text-transform: uppercase;
+	font:  15px 'Montserrat', sans-serif;
+	color: white;
+	margin: 3em 0 1em 0;
+}
+
+/*строки под основными заголовками и основной текст*/
+.stringUnderHeaders {
+	color: #777777;
+	font: 18px 'RobotoSlab-Regular', serif;
+	margin-top: 2em;
+}
+.part_two p, .part_four p, .part_five p, .part_six p {
+	margin-top: 15px;
+}
+.part_three .text .stringUnderHeaders {
+	font-size: 14px;
+	margin: 35px 12px;
+}
+.part_two .textInServices, .part_four .textInServices, .part_five .textInServices {
+	color: #777777;
+	font: 14px 'RobotoSlab-Regular', serif;
+}
+
+/*кнопки*/
+.part_one button, .part_three button, .part_seven button {
+	text-transform: uppercase;
+	font:  15px 'Montserrat', sans-serif;
+	border: none;
+	height: 55px;
+	width: 180px;
+	background: #7cc576;
+	border-radius: 30px;
+	margin-top: 60px;
+}
+.part_one button:hover, .part_three button:hover, .part_seven button:hover {
+	background: white;
+	color: #222222;
+	text-shadow: none;
+}
+.part_one button a, .part_three button a, .part_seven button a {
+	display: block;
+	padding: 15px 0;
+	text-decoration: none;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #3ba738;
+}
+.part_three button {
+	position: relative;
+	bottom: -30px;
+	left: 110px;
+}
+.part_four .btnPartFour a {
+	text-transform: uppercase;
+	font:  15px 'Montserrat', sans-serif;
+	text-decoration: none;
+	color: #7CC576;
+}
+.part_four .btnPartFour {				
+	border: none;
+	background: none;
+	margin-top: 10px;
+}
+.part_four .fa-long-arrow-right {			/*анимированная стрелка на кнопке в части 4*/
+	display: inline-flex;
+	padding-left: 10px;
+}
+
+.text:hover .fa-long-arrow-right {
+	transform: rotate(1080deg);
+	transform-origin: 75%;
+	transition: transform 2s;				/*конец анимированной стрелки на кнопке в части 4*/
+}
+.part_seven button {
+	border: 2px solid white;
+	background-color: none;
+	border-radius: 10px;
+}
+
+/*блоки страницы. фоны и отступы*/
+.part_one {
+	background: url(../images/title_background.png) no-repeat scroll;
+	padding-top: 1px;
+	height: 530px;
+}
+.part_one, .part_two, .part_four, .part_five, .part_six, .part_seven {
+	text-align: center;
+}
+.part_three {
+	background: url(../images/part_three_background_2.jpg) no-repeat scroll;
+}
+.part_three .lift_background {
+	height: 530px;
+	background: url(../images/part_three_background.jpg) no-repeat scroll;
+	background-color: rgba(0,0,0,.6);
+    background-blend-mode: darken;
+    margin-left: 95%;
+    transition: margin-left 1.5s;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+.part_three:hover .lift_background {
+	margin-left: 0;
+}
+.part_three .text {
+	position: relative;
+	top: 40px;
+	left: 100px;
+}
+.part_four {
+	height: 30%;
+	background: url(../images/tablet.png) no-repeat;
+	background-size: 45%;
+	background-position: 100% 95%;
+}
+.part_four .text {
+	margin: 85px 230px;
+	text-align: left;
+	width: 35%;
+}
+.part_five {
+	background-color: #F9F9F9;
+	padding-top: 1px;
+}
+.part_seven {
+	height: 12em;
+	background-color: #7CC576;
+}
+
+/*параметры элементов части 2 и частично 5*/
+.checksInPartTwoNFive {
+	width: 300px;
+	display: inline-block;
+	margin: 80px 20px;
+}
+
+/*параметры элементов части 3, транзишн*/
+.part_three .text span, .fa-check-circle-o {
+	color: #7CC576;
+}
+.fa-check-circle-o, .buttonNearChecks  {
+	opacity: 0;
+}
+.checkOne {
+	transition: opacity 1s ease 2.5s;
+}
+.checkTwo {
+	transition: opacity 1s ease 3s;
+}
+.checkThree {
+	transition: opacity 1s ease 3.5s;
+}
+.buttonNearChecks {
+	transition: opacity 1s ease 4.0s;
+}
+.part_three:hover .fa-check-circle-o, .part_three:hover .buttonNearChecks {
+	opacity: 1;	
+}
+.checks {
+	position: relative;
+	top: 50px;
+	left: 110px;
+}
+.checks i {
+	display: flex;
+}
+.checks p {
+	font-size: 14px;
+	margin: 13px 2%;
+}
+
+/*параметры элементов части 4*/
+.part_four .fa {
+	margin-top: 20px;
+	display: inline-flex;
+}
+.miniHeader {
+	font: bold 15px 'Montserrat', sans-serif; 
+	color: black;
+}
+.textNearIcons {
+	margin: 5px 25px;
+}
+.fa-desktop {
+	margin-left: -3px; 
+}
+.fa-lock {
+	margin-left: 0.14em; 
+}
+.third {
+	margin-left: 2.6em;
+}
+
+/*параметры элементов части 5. только цвет иконок*/
+.part_five .fa {
+	color: #777777;
+}
+/*параметры элементов части 6*/
+.avatar {
+	height: 200px;
+	width: 200px;
+	background: url(../images/foto_for_feedback_1.jpg) no-repeat;
+	background-size: contain;
+	border-radius: 100px;
+	float: left;
+	margin-top:-3em; 
+}
+.textOfFeedback {
+	width: 30em;
+	text-align: justify;
+	margin: 60px 240px;
+	font: 16px 'RobotoSlab-Regular', serif; 
+	line-height: 2em;
+}
+.signature {
+	text-align: center;
+	color: #7CC576;
+	font-size: .8em;
+}
+.feedback {
+	width: 760px;
+	margin: 100px auto;
+}
+.avatarSecond {
+	float: right;
+	background: url(../images/foto_for_feedback_2.jpg) no-repeat;
+	background-size: contain;
+}
+.textOfFeedbackSecond {
+	margin: 60px 50px;
+}
+
+/*анимированные логотипы партнеров. футер*/
+.partnersLogos {
+	height: 12em;
+	display: flex;
+	justify-content: center;
+}
+.khl, .wwf, .samsung, .rzd {
+	width: 15%;
+	transition: background 1s ease;
+}
+.khl {
+	background: url(../images/logo_khl_blacknwhite.jpg) center no-repeat;
+	background-size: 50%;
+}
+.khl:hover {
+	background: url(../images/logo_khl_color.jpg) center no-repeat;
+	background-size: 60%;
+} 
+.samsung {
+	background: url(../images/logo_samsung_blacknwhite.png) center no-repeat;
+	background-size: 50%;
+}
+.samsung:hover {
+	background: url(../images/logo_samsung_color.png) center no-repeat;
+	background-size: 70%;
+} 
+.wwf {
+	background: url(../images/logo_wwf_blacknwhite.jpg) center no-repeat;
+	background-size: 40%;
+}
+.wwf:hover {
+	background: url(../images/logo_wwf_color.jpg) center no-repeat;
+	background-size: 50%;
+} 
+.rzd {
+	background: url(../images/logo_rzd_blacknwhite.png) center no-repeat;
+	background-size: 50%;
+}
+.rzd:hover {
+	background: url(../images/logo_rzd_color.png) center no-repeat;
+	background-size: 60%;
+}
+
+/*элементы футера. списки*/
+.info {
+	display: flex;
+	justify-content: center;
+	background-color: #222222;
+	height: 20em;
+}
+.contactUs, .latestPosts, .latestTweets {
+	width: 20em;
+}
+
+.info p, .latestPosts a, .latestTweets a {
+	color: #ECECEC;
+	font: 13px 'RobotoSlab-Regular', serif;
+	margin-bottom: 1em;
+	text-decoration: none;
+}
+.info ul {
+	list-style-type: none;
+}
+.info .fa {
+	color: #ECECEC;
+	margin-right: 1em;
+}
+.info .fa-mobile, .info .fa-envelope {
+	margin-left: .07em;
+}
+.info span {
+	margin-left: -1em;
+}
+.latestPosts a {
+	text-transform: capitalize;
+	line-height: 3em;
+}
+.latestPosts .fa-youtube-square {
+	font-size: 20px;
+	margin-left:-0.05em;
+}
+.latestPosts span {
+	margin-left: -.6em;
+}
+.latestPosts .lastPost {
+	margin-left: .2em;
+}
+.latestTweets .footerSubtitles, .latestTweets li {
+	margin-bottom: 1.65em;
+}
+.fa-twitter {
+	padding-bottom: 2em;
+	float: left;
+	clear: both;
+}
+.latestTweets span {
+	margin-left: .08em;
+	font-size: 80%;
+}
+
+/*иконки соцсетей + копирайт*/
+.networksLogos {
+	height: 6.25em;
+	display: flex;
+	justify-content: center;
+}
+.networksLogos p {
+	font: 15px 'Montserrat-Regular', sans-serif;
+	margin: 1.6em 4em 0 0;
+}
+.networksLogos a {
+	text-decoration: none;
+	color: black;
+}
+.networksLogos .fa {
+	margin: 1em .3em;
+}
+
+/*адаптивность. пока сыровата*/
+@media screen and (max-width: 834px) {
+	header {
+		height: 9.1875em;
+	}
+	.mainLogo {
+		margin-left: 38%;
+	}
+	.horizontalMenu {
+		margin: 0 8em;
+	}
+	.part_four .text {
+		margin: 85px 9em;
+		width: 70%;
+	}
+	.part_seven {
+		height: 13em;
+	}
+}
+@media screen and (max-width: 737px) {
+	header {
+		height: 7em;
+	}
+	.mainLogo {
+		margin-left: 17%;
+	}
+	.horizontalMenu {
+		display: none;
+	}
+	.nav-btn {
+		border-bottom: 17px double #777777; 
+	    border-top: 6px solid #777777;
+	    height:5px; 
+	    width:30px;
+	    margin: -3.3em 81%;
+	}
+	.checksInPartTwoNFive {
+		margin: 1em 0;
+	}
+	.part_four .text {
+		margin: 85px 2em;
+		width: 70%;
+	}
+	/*убираем транзишн, масштабирование в состоянии hover*/
+	.partnersLogos :not(:nth-child(4)){
+		margin-right: 10%;
+	}
+	.khl {
+		background: url(../images/logo_khl_color.jpg) center no-repeat;
+		background-size: 100%;
+	}
+	.samsung {
+		background: url(../images/logo_samsung_color.png) center no-repeat;
+		background-size: 100%;
+	}
+	.wwf {
+		background: url(../images/logo_wwf_color.jpg) center no-repeat;
+		background-size: 100%;
+	}
+	.rzd {
+		background: url(../images/logo_rzd_color.png) center no-repeat;
+		background-size: 100%;
+	}
+	.khl:hover, .samsung:hover, .wwf:hover, .rzd:hover  {
+		background-size: 100%;
+	} 
+	.info {
+		height: 20%;
+	}
+	.fa-twitter {
+		padding-bottom: 4em;
+	}
+	.networksLogos p {
+		font-size: 10px; 
+		margin-top: 3.2em;
+	}
+}
+
